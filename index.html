@@ -2,16 +2,22 @@
 <html lang="en">
 
 <style>
-    /*# sourceMappingURL=main.css.map */
+    :root {
+        --exp-margin: 3px
+    }
+
     body {
         font-family: 'JetBrains Mono';
         font-size: 13px;
         background-color: #282c34;
         color: #abb2bf;
+        width: 960px;
+        margin: 0 auto;
     }
 
     fieldset {
         border-color: #d19a66;
+        margin-bottom: 5px;
     }
 
     legend {
@@ -25,6 +31,8 @@
     .legend-contact {
         color: #61afef;
     }
+
+
 
     .legend-skills {
         color: #98c379;
@@ -112,6 +120,7 @@
 
     .exp-tools {
         color: #c778dd;
+        margin-bottom: 5px;
     }
 
     .exp__achivments_header {
@@ -128,7 +137,7 @@
     }
 
     .central-fieldset {
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
     .div-inline-block {
@@ -200,31 +209,44 @@
     .exp {
         margin-bottom: 10px;
         padding-bottom: 10px;
-        border-bottom: 2px solid #d19a66;
+        border-bottom: 2px groove #d19a66;
     }
 
-    .exp-last {
-        margin-bottom: 10px;
+    .exp-param {
+        margin-bottom: var(--exp-margin);
     }
 
     .exp-period {
         color: #ef596f;
+        margin-bottom: var(--exp-margin);
     }
 
     .exp-company {
         color: #e5c07b;
+        margin-bottom: var(--exp-margin);
+    }
+
+    .exp-position-legend {
+        color: #98c379;
     }
 
     .exp-position {
+        color: #98c379;
+        margin-bottom: var(--exp-margin);
+    }
+
+    .exp-start {
         color: #98c379;
     }
 
     .exp-tasks {
         color: #61afef;
+        margin-bottom: var(--exp-margin);
     }
 
     .exp-tools {
         color: #c778dd;
+        margin-bottom: var(--exp-margin);
     }
 
     .exp-achievements {
@@ -262,56 +284,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=JetBrains Mono'>
-
 </head>
 
 <body>
     <div class="header">
-        <div class="cv">
-            <table width="100%" cellspacing="0" cellpadding="0">
-                <tr>
-                    <td width="300" valign="top" id="leftcol" class="col">
-                        <div class="name-and-position">
-                            <h1>Евгений Бородин</h1>
-                            <h2>.NET SOFTWARE ENGINEER</h2>
-                        </div>
+        <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="300" valign="top" class="col">
+                    <div class="name-and-position">
+                        <h1>Евгений Бородин</h1>
+                        <h2>.NET SOFTWARE ENGINEER</h2>
+                    </div>
 
-                    </td>
-                    <td valign="bottom" id="rightcol" class="col" style="text-align: right;">
-                        <div class="download-pdf">
-                            <h2>
-                                <a href="https://raw.githubusercontent.com/openai/gpt-3.5/master/LICENSE">СКАЧАТЬ PDF
-                                    ВЕРСИЮ</a>
-                            </h2>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                </td>
+                <td valign="bottom" id="rightcol" class="col" style="text-align: right;">
+                    <div class="download-pdf">
+                        <h1>Опыт разработки 10 лет</h1>
+                        <h2>
+                            <a href="https://raw.githubusercontent.com/openai/gpt-3.5/master/LICENSE">СКАЧАТЬ PDF
+                                ВЕРСИЮ</a>
+                        </h2>
+                    </div>
+                </td>
+            </tr>
+        </table>
 
-            <div class="description">
-                <fieldset>
-                    <legend class="exp-position">[ Обо мне ]</legend>
-                    Моя главная специализация - backend на ASP.NET Core. Монолиты и микросервисы. Я хорошо знаю принципы
-                    SOLID и паттерны проектирования, ценю TDD, знаком с DDD. Умею использовать все стандартные протоколы
-                    и подходы к коммуникации сервисов (REST, SOAP, gRPC, GraphQL, MQ, Outbox). Работаю с большинством
-                    стандартных реляционных баз данных (MS SQL Server, PostgreSQL, Oracle, SQLite). Вместе с основным
-                    серверным стеком, я имею опыт разработки для всех клиентских платформ (desktop, mobile, web) и
-                    способен спроектировать и имплементировать систему целиком от базы данных до клиентских приложений.
-                    Моя текущая карьерная цель - развитие из разработчика в архитектора. Поэтому я всегда в поиске новых
-                    знаний о технологиях всех стеков и об объединяющих их архитектурных практиках. Люблю читать проф
-                    литературу. Знаком с трудами таких авторов как М. Клэпман, К. Кокоса, Р. Мартин.
-                    Последняя прочитанная кника - Designing Data-Intensive Applications.
-                    Последнее личное достижение - прохождение курса System Design.
-                    Последний факап - нарушение порядка релизов элементов системы, повлекшее закрытие доступов
-                    авторизованным пользователям к странице портала.
-                </fieldset>
-            </div>
+        <div class="description">
+            <fieldset>
+                <legend class="exp-position">[ Обо мне ]</legend>
+                Моя главная специализация - backend на ASP.NET Core. Монолиты и микросервисы. Я хорошо знаю принципы
+                SOLID и паттерны проектирования, ценю TDD, знаком с DDD. Умею использовать все стандартные протоколы
+                и подходы к коммуникации сервисов (REST, SOAP, gRPC, GraphQL, MQ, Outbox). Работаю с большинством
+                стандартных реляционных баз данных (MS SQL Server, PostgreSQL, Oracle, SQLite). Вместе с основным
+                серверным стеком, я имею опыт разработки для всех клиентских платформ (desktop, mobile, web) и
+                способен спроектировать и имплементировать систему целиком от базы данных до клиентских приложений.
+                Моя текущая карьерная цель - развитие из разработчика в архитектора. Поэтому я всегда в поиске новых
+                знаний о технологиях всех стеков и об объединяющих их архитектурных практиках. Люблю читать проф
+                литературу. Знаком с трудами таких авторов как М. Клэпман, К. Кокоса, Р. Мартин.
+                Последняя прочитанная кника - Designing Data-Intensive Applications.
+                Последнее личное достижение - прохождение курса System Design.
+                Последний факап - нарушение порядка релизов элементов системы, повлекшее закрытие доступов
+                авторизованным пользователям к странице портала.
+            </fieldset>
         </div>
     </div>
 
     <table width="100%" cellspacing="0" cellpadding="0">
         <tr>
-            <td width="210" valign="top" id="leftcol" class="col">
+            <td width="210" valign="top" class="col">
                 <section>
                     <fieldset class="fieldset-skills">
                         <legend>[ Контакты ]</legend>
@@ -436,10 +456,10 @@
             <td valign="top" id="rightcol" class="col">
                 <section class="central-fieldset">
                     <fieldset>
-                        <legend class="exp-position">[ Опыт работы ]</legend>
+                        <legend class="exp-position-legend">[ Опыт работы ]</legend>
                         <div class="exp">
                             <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-period">Время</div>
                                     </td>
@@ -447,7 +467,7 @@
                                         <div class="exp-period">Август 2021 — По настоящее время</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-company">Место</div>
                                     </td>
@@ -455,7 +475,7 @@
                                         <div class="exp-company">Intermedia</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-position">Должность</div>
                                     </td>
@@ -463,7 +483,7 @@
                                         <div class="exp-position">Инженер-программист</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tasks">Задачи</div>
                                     </td>
@@ -472,7 +492,7 @@
                                             биллинговой системы (портал, микросервисы)</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tools">Инструменты</div>
                                     </td>
@@ -486,28 +506,36 @@
                             <div class="exp-achievements">Достижения:</div>
                             <section class="exp-achievements">
                                 <lu>
-                                    <li>Повысил скорость обработки инцидентов за счет улучшения системы
-                                        логирования</li>
-                                    <li>Превратил консольную утилиту для работы с интеграциями в удобный
-                                        API-инструмент</li>
-                                    <li>Провел крупное обновление библиотеки-клиента внешней системы</li>
-                                    <li>Разработал сервис управления конфигурациями внутренних систем с
-                                        подходом
-                                        "data as a code"</li>
-                                    <li>Внедрял новую систему безопасности для подготовки компании к выходу
-                                        на IPO</li>
-                                    <li>Создал основу бэка и фронта нового сервиса, встроенного в общий
-                                        портал
-                                        Интегрировал новую UI библиотеку</li>
-                                    <li>Стал главным экспертом по интеграциям с внешними системами и движку
-                                        безопасности</li>
+                                    <li>
+                                        Повысил скорость обработки инцидентов за счет улучшения системы
+                                        логирования
+                                    </li>
+                                    <li>
+                                        Превратил консольную утилиту для работы с интеграциями в удобный
+                                        API-инструмент
+                                    </li>
+                                    <li>
+                                        Провел крупное обновление библиотеки-клиента внешней системы
+                                    </li>
+                                    <li>
+                                        Разработал сервис конфигурирования внутренних систем с подходом "data as a code"
+                                    </li>
+                                    <li>
+                                        Внедрял новую систему безопасности для подготовки компании к выходу на IPO
+                                    </li>
+                                    <li>
+                                        Внедрил новую UI библиотеку
+                                    </li>
+                                    <li>
+                                        Стал главным экспертом по движку безопасности и системам интеграции
+                                    </li>
                                 </lu>
                             </section>
                         </div>
 
                         <div class="exp">
                             <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-period">Время</div>
                                     </td>
@@ -515,7 +543,7 @@
                                         <div class="exp-period">Январь 2020 — Август 2021</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-company">Место</div>
                                     </td>
@@ -523,7 +551,7 @@
                                         <div class="exp-company">DIGITAL FUTURE SYSTEMS</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-position">Должность</div>
                                     </td>
@@ -531,7 +559,7 @@
                                         <div class="exp-position">Разработчик 3-ей категории</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tasks">Задачи</div>
                                     </td>
@@ -540,34 +568,41 @@
                                             ДИТ г. Москвы. Менторинг.</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tools">Инструменты</div>
                                     </td>
                                     <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tools">[ASP.NET Core] [.NET5] [EF Core]
-                                            [PostgreSQL] [React] [TypeScript] [IBM MQ]</div>
+                                        <div class="exp-tools">
+                                            [ASP.NET Core] [.NET5] [EF Core] [PostgreSQL] [React] [TypeScript] [IBM MQ]
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
                             <div class="exp-achievements">Достижения:</div>
                             <section class="exp-achievements">
                                 <lu>
-                                    <li>Разработал сервис автоматации миграции контента между различными экземплярами
-                                        веб-сервиса, эмулирующий клиентское приложение.</li>
-                                    <li>Разработал множество REST API и сервисов интеграции с внешними системами,
-                                        используя протоколы REST, SOAP и очереди (IBM MQ)</li>
-                                    <li>Овладел фреймворком React+Redux и разработал внутренний инструмент на его основе
+                                    <li>
+                                        Разработал сервис миграции контента, эмулирующий клиентское приложение
                                     </li>
-                                    <li>Эффективно обучил стажера с минимальным опытом, подготовив его к самостоятельной
-                                        работе во время моего отпуска</li>
+                                    <li>
+                                        Разработал множество REST API и сервисов интеграции с внешними системами
+                                    </li>
+                                    <li>
+                                        Овладел фреймворком React + Redux и разработал внутренний инструмент на его
+                                        основе
+                                    </li>
+                                    <li>
+                                        Эффективно обучил стажера с минимальным опытом, подготовив его к самостоятельной
+                                        работе
+                                    </li>
                                 </lu>
                             </section>
                         </div>
 
                         <div class="exp">
                             <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-period">Время</div>
                                     </td>
@@ -575,7 +610,7 @@
                                         <div class="exp-period">Сентябрь 2019 — Январь 2020</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-company">Место</div>
                                     </td>
@@ -583,7 +618,7 @@
                                         <div class="exp-company">PRO IT</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-position">Должность</div>
                                     </td>
@@ -591,7 +626,7 @@
                                         <div class="exp-position">Главный разработчик 1 разряда</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tasks">Задачи</div>
                                     </td>
@@ -600,7 +635,7 @@
                                             услуг внутри системы ЕАИСТ.</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tools">Инструменты</div>
                                     </td>
@@ -614,16 +649,23 @@
                             <div class="exp-achievements">Достижения:</div>
                             <section class="exp-achievements">
                                 <lu>
-                                    <li>Доработал систему логирования и написал несколько экспортов в Excel. Получил
-                                        опыт в разработке фронтэнда на Angular + TypeScript</li>
+                                    <li>
+                                        Овладел фреймворком Angular + TypeScript
+                                    </li>
+                                    <li>
+                                        Доработал систему логирования.
+                                    </li>
+                                    <li>
+                                        Реализовал экспорт рядя отчетов в Excel
+                                    </li>
                                 </lu>
                             </section>
 
                         </div>
 
-                        <div class="exp">
+                        <div class="exp-last">
                             <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-period">Время</div>
                                     </td>
@@ -631,7 +673,7 @@
                                         <div class="exp-period">Август 2016 — Aвгуст 2019</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-company">Место</div>
                                     </td>
@@ -639,7 +681,7 @@
                                         <div class="exp-company">IBS</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-position">Должность</div>
                                     </td>
@@ -647,21 +689,22 @@
                                         <div class="exp-position">Консультант-разработчик</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tasks">Задачи</div>
                                     </td>
                                     <td valign="top" id="rightcol" class="col">
                                         <lu class="exp-tasks">
-                                            <li>Участвовал в разработке семейства BI-продуктов "Планета"
-                                                на базе технологий OLAP (http://planetaibs.ru/).</li>
+                                            <li>Разработка семейства BI-продуктов <a
+                                                    href="http://planetaibs.ru">"Планета"</a> на базе технологий OLAP.
+                                            </li>
                                             <li>Разрабатывал клиентское приложение-надстройку для Excel, библиотеку DAL
                                                 для
                                                 OLAP с покрытием unit-тестами, веб-сервисы, инсталляторы.</li>
                                         </lu>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tools">Инструменты</div>
                                     </td>
@@ -675,414 +718,131 @@
                             <div class="exp-achievements">Достижения:</div>
                             <section class="exp-achievements">
                                 <lu>
-                                    <li>Помог в разработке приложений и развития их архитектуры от надстройки над Excel
-                                        до семейства продуктов для бюджетирования и аналитики.</li>
-                                    <li>Разработал алгоритмы построения двухмерной развертки многомерных кубов данных с
-                                        древовидной структурой справочников для их отображения в Excel.</li>
+                                    <li>Помог развить надстройку над Excel с OLAP-сервером до семейства BI-продуктов
+                                    </li>
+                                    <li>Разработал алгоритмы визуализации многомерных данных в двумерных таблицах</li>
                                     <li>Покрыл DAL-библиотеку модульными тестами.</li>
-                                    <li>Предложил и реализовал внедрение единой серверной прослойки между OLAP и
-                                        клиентами (Excel и web), тем самым сократил объемы разработки и унифицировал API
-                                        для клиентов.</li>
-                                    <li>Написал инсталляторы для всех компонентов системы и сформировал документацию по
-                                        их установке.</li>
-                                    <li>Написал модуль экспорта виджетов из аналитической системы в Excel (таблицы и
+                                    <li>Сократил объем работ, внедрив единый сервис-медиатор связи OLAP с разными
+                                        клиентами</li>
+                                    <li>Написал инсталляторы для всех компонентов системы и сформировал документацию к
+                                        ним</li>
+                                    <li>Создал модуль экспорта виджетов из аналитической системы в Excel (таблицы и
                                         диаграммы).</li>
-                                    <li>Провел анализ производительности слоёв архитектуры бэкэнда и разделил монолит на
-                                        модули для возможности перехода на микросервисную архитектуру для
-                                        масштабирования.</li>
+                                    <li>Проанализировал перфоманс модулей бэкэнда и устранил боттл-неки</li>
+                                    <li>Разделил монолит на библиотеки для возможности перехода на микросервисную
+                                        архитектуру</li>
                                     <li>Овладел приёмами оптимизиации EF Core.</li>
                                 </lu>
                             </section>
 
                         </div>
+                    </fieldset>
 
-                        <div class="exp">
-                            <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-period">Время</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Апрель 2016 — Июль 2016</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-company">Место</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">Фриланс. Разработка информационной системы для
-                                            комплектации промышленных стеллажей.</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-position">Должность</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">.NET Developer</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tasks">Задачи</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Имея на руках старую версию программы на .NET+WinForms+
-                                            MS Access, работающую локально, разрабатывал новую сетевую версию с единой
-                                            бд.</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tools">Инструменты</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tools">[ASP.NET WebAPI] [WPF] [Material UI]
-                                            [MS SQL Server]</div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="exp-achievements">Достижения:</div>
-                            <section class="exp-achievements">
-                                <lu>
-                                    <li>Разработал клиент-серверную систему с приятным современным интерфейсом, быстро
-                                        выполняющую технические и финансовые расчеты и выгрузку в Excel.</li>
-                                    <li>Повысил удобство работы для исполнителей и централизованного мониторинга
-                                        проектов для руководства.</li>
-                                    <li>В свободное время, сих пор занимаюсь поддержкой этой системы, внедряя новые
-                                        фичи.</li>
-                                </lu>
-                            </section>
-
-                        </div>
-
-                        <div class="exp">
-                            <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-period">Время</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Июнь 2015 — Cентябрь 2015</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-company">Место</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">Фриланс. Разработка системы для коллекторского
-                                            агенства.</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-position">Должность</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">.NET Developer</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tasks">Задачи</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Участвовал в написании клиентской и серверной части
-                                            системы. Общался с заказчиком по части дизайна UI.</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tools">Инструменты</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tools">[Windows Forms] [WCF] [Entity Framework]
-                                            [MS SQL SERVER] [Asterisk АТС]</div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="exp-achievements">Достижения:</div>
-                            <section class="exp-achievements">
-                                <lu>
-                                    <li>Довел до релиза систему, решившую проблему автоматизации и учета звонков,
-                                        ведения статусов контактов и документооборота с выгрузкой отчетов, что помогло
-                                        бизнесу систематизировать свою работу и значительно повысить эффективность
-                                        работы повысив её скорость и контроль за процессами.</li>
-                                    <li>Научился разрабатывать клиент-серверные приложения на протоколе SOAP (WCF) и
-                                        использовать Entity Framework.</li>
-                                </lu>
-                            </section>
-
-                        </div>
-
-                        <div class="exp">
-                            <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-period">Время</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Март 2015 — Май 2015</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-company">Место</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">Фриланс. Разработка информационной системы.</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-position">Должность</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">.NET Developer</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tasks">Задачи</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Разработка системы учета пациентов для
-                                            специализированного медицинского учреждения.</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tools">Инструменты</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tools">[Windows Forms] [SQlite] [InteropExcel]</div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="exp-achievements">Достижения:</div>
-                            <section class="exp-achievements">
-                                <lu>
-                                    <li>Написал приложение для ведения карточек пациентов, записей на приём и
-                                        формирования отчетов в Excel.</li>
-                                    <li>Изучил работу со встраиваемыми базами данных на примере SQLite.</li>
-                                    <li>Провел крупное обновление библиотеки-клиента внешней системы</li>
-                                    <li>Научился выстраивать диалог с заказчиком.</li>
-                                </lu>
-                            </section>
-
-                        </div>
-
-                        <div class="exp">
-                            <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-period">Время</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Март 2014 — Октябрь 2014</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-company">Место</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">Независимый проект. Разработка CRM-системы</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-position">Должность</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">.NET Developer</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tasks">Задачи</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Разработка клиента для системы автоматического обзвона.
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tools">Инструменты</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tools">[Windows Forms] [ADO.NET] [PosgreSQL]</div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="exp-achievements">Достижения:</div>
-                            <section class="exp-achievements">
-                                <lu>
-                                    <li>Получил первый серьезный опыт разработки на .NET, и опыт командной разработки.
-                                    </li>
-                                    <li>Помог друзьям довести систему до MVP</li>
-                                    <li>Изучил WinForms и работу с базами данных.</li>
-                                </lu>
-                            </section>
-
-                        </div>
-
-                        <div class="exp">
-                            <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-period">Время</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Август 2011 — Март 2015</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-company">Место</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">САТУРН-Р БЫТОВАЯ ТЕХНИКА</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-position">Должность</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">Системный администратор</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tasks">Задачи</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Администрирование клиентского, серверного и торгового
-                                            оборудования на платформах Windows, Debian Linux.</div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="exp">
-                            <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-period">Время</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Март 2010 — Сентябрь 2010</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-company">Место</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">ООО «ПЕРМЬ-ГРАД»</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-position">Должность</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">Системный администратор</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tasks">Задачи</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Администрирование удаленных локальных сетей клиентов.
-                                            Техническая поддержка пользователей.</div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div class="exp">
-                            <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-period">Время</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Март 2008 — Август 2008</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-company">Место</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">ООО «ЦИФРОВЫЕ ТЕХНОЛОГИИ»</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-position">Должность</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">Специалист Helpdesk</div>
-                                    </td>
-                                </tr>
-                                <tr valign="top" id="leftcol" class="col">
-                                    <td width="95">
-                                        <div class="exp-tasks">Задачи</div>
-                                    </td>
-                                    <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Мониторинг сетей, удаленная поддержка пользователей,
-                                            координация работы специалистов.
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
+                    <fieldset>
+                        <legend class="exp-start">[ Начало карьеры ]</legend>
                         <div class="exp-last">
                             <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-period">Время</div>
                                     </td>
                                     <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-period">Январь 2005 — Июнь 2007</div>
+                                        <div class="exp-period">Март 2014 — Июль 2016</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-company">Место</div>
                                     </td>
                                     <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-company">ООО «ДЕЛОВОЙ СОФТЪ»</div>
+                                        <div class="exp-company">Участие в независимых проектах, Фриланс</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-position">Должность</div>
                                     </td>
                                     <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-position">1С-ПРОГРАММИСТ</div>
+                                        <div class="exp-position">.NET Developer</div>
                                     </td>
                                 </tr>
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-tasks">Задачи</div>
                                     </td>
                                     <td valign="top" id="rightcol" class="col">
-                                        <div class="exp-tasks">Сопровождение и доработка конфигураций семейства
-                                            продуктов 1С</div>
+                                        <div class="exp-tasks">Разработка клиентского и серверного ПО</div>
+                                    </td>
+                                </tr>
+                                <tr valign="top" class="col">
+                                    <td width="95">
+                                        <div class="exp-tools">Инструменты</div>
+                                    </td>
+                                    <td valign="top" id="rightcol" class="col">
+                                        <div class="exp-tools">[ASP.NET WebAPI] [WPF] [Material UI] [MS SQL Server]
+                                            [Entity Framework Core] [WCF] [MS SQL SERVER] [Asterisk АТС] [SQlite]
+                                            [InteropExcel] [Windows Forms] [ADO.NET] [PosgreSQL] [SOAP] [REST] [Git]
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="exp-achievements">Достижения:</div>
+                            <section class="exp-achievements">
+                                <lu>
+                                    <li>Получил первый коммерческий опыт командной разработки на .NET. </li>
+                                    <li>Овладел основными инструментами и подходами</li>
+                                    <li>Добавил оптимизации в работе запросов через Entity Framework</li>
+                                    <li>Научился выстраивать диалог с заказчиком.</li>
+                                    <li>Повысил удобство и скорость работы для исполнителей</li>
+                                    <li>Дал инструменты контроля и анализа процессов для менеджмента</li>
+                                    <li>Успешно довел до релиза несколько проектов</li>
+                                </lu>
+                            </section>
+                        </div>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend class="exp-position">[ Нерелевантный опыт работы ]</legend>
+                        <div class="exp-last">
+                            <table width="100%" cellspacing="0" cellpadding="0">
+                                <tr valign="top" class="col">
+                                    <td width="95">
+                                        <div class="exp-period">Время</div>
+                                    </td>
+                                    <td valign="top" id="rightcol" class="col">
+                                        <div class="exp-period">Январь 2005 — Март 2015</div>
+                                    </td>
+                                </tr>
+                                <tr valign="top" class="col">
+                                    <td width="95">
+                                        <div class="exp-company">Место</div>
+                                    </td>
+                                    <td valign="top" id="rightcol" class="col">
+                                        <div class="exp-company">Различные компании</div>
+                                    </td>
+                                </tr>
+                                <tr valign="top" class="col">
+                                    <td width="95">
+                                        <div class="exp-position">Должность</div>
+                                    </td>
+                                    <td valign="top" id="rightcol" class="col">
+                                        <div class="exp-position">Системный администратор, Специалист Helpdesk
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr valign="top" class="col">
+                                    <td width="95">
+                                        <div class="exp-tasks">Задачи</div>
+                                    </td>
+                                    <td valign="top" id="rightcol" class="col">
+                                        <div class="exp-tasks">Полный спектор задач системного администратора</div>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                     </fieldset>
+
                     <fieldset class="fieldset-education">
                         <legend class="education">[ Образование ]</legend>
                         <div class="education-header">
@@ -1091,7 +851,7 @@
 
                         <div class="exp-last">
                             <table width="100%" cellspacing="0" cellpadding="0">
-                                <tr valign="top" id="leftcol" class="col">
+                                <tr valign="top" class="col">
                                     <td width="95">
                                         <div class="exp-position">2009</div>
                                     </td>
